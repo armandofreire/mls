@@ -7,7 +7,7 @@ import './SearchBar.css';
 
 // Se as imagens forem menores que 10k, retorna o base64
 import logo from '../../assets/logo.png';
-import search from '../../assets/search3.png';
+import search from '../../assets/search.png';
 
 class SearchBar extends Component {
 	constructor(props) {
@@ -37,8 +37,8 @@ class SearchBar extends Component {
 							<input
 								type="text"
 								className="col-md-12 col-sm-12 col-xs-12 search-box"
-								placeholder="Nunca deixe de buscar"
 								onChange={ e => this.setState({ query: e.target.value}) }
+								autoFocus={ true }
 								onKeyPress={ event => { if (event.key === 'Enter') { this.search() }} }
 							/>
 							<span className="input-group-btn">
